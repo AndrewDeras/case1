@@ -49,11 +49,10 @@ class ProdutoController {
 
   async deletarProduto(req, res) {
     try {
-      const id = req.body.id;
       const produto = await Produto.destroy({
-        where: { id: id }
+        where: { id: req.params.id }
       });
-      return res.json(produto);
+      return res.send('produto deletado');
     } catch (error) {
       console.error(`Erro ao deletar produto ${error}`);
       res.status(500).json({ error: 'Erro ao deletar produto' });
