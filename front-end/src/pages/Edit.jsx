@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+
 
 const Edit = () => {
+  const navigate = useNavigate();
   const { id } = useParams(); // Obtém o id do produto a partir dos parâmetros da rota
   const [produto, setProduto] = useState({
     id: id,
@@ -20,13 +22,14 @@ const Edit = () => {
 
   const handleSubmit = async (e) => {
     await axios.post(`http://localhost:5656/produto/update`, produto);
+    navigate('/home');
     // Lógica para lidar com o resultado da requisição de atualização
   };
 
   return (
     <div className="container">
       <h1>Editar Produto</h1>
-      <form onSubmit={handleSubmit}>
+      <form>
         <div className="form-group">
           <label htmlFor="nome">Nome</label>
           <input
@@ -63,9 +66,9 @@ const Edit = () => {
             onChange={(e) => setProduto({ ...produto, price: e.target.value })}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <a onClick={handleSubmit} type="button" className="btn btn-primary">
           Salvar
-        </button>
+        </a>
       </form>
     </div>
   );
