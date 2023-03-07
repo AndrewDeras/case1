@@ -1,16 +1,9 @@
 # Cadastro_de_Produtos_MVP_Case1_Individual
-Criando um app de lista de filmes para o projeto do case 1 individual para o bootcamp da Resilia. 
 
- Parte 1 - Criando uma API para o projeto de uma lista de filmes. Realizei todo o back end no padrão MVC e utilizei o banco de dados sqlite. 
- <br>
- Parte 2 - Criei o front para demonstrar em tabela meu banco de dados. 
-
- 
  ## Objetivo 📍
 ⇨ Utilizar o padrão MVC;
 ⇨ Utilizar os verbos HTTP seguindo o padrão REST;
 ⇨ Implementar todas as operações de CRUD;
-
  
  ## Etapas :bookmark_tabs:
  1. Entendendo o problema
