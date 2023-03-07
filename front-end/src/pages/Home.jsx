@@ -20,7 +20,7 @@ const Home = () => {
   };
 
   return (
-    <div className="container text-center">
+    <div className="container text-center mt-5">
       <h1>PRODUTOS</h1>
       <div className="container">
         <table className="table table-striped table-hover table-bordered border-dark">

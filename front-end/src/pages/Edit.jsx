@@ -27,11 +27,11 @@ const Edit = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container mt-5">
       <h1>Editar Produto</h1>
       <form>
         <div className="form-group">
-          <label htmlFor="nome">Nome</label>
+          <label className='fw-bold m-2 ' htmlFor="nome">Nome</label>
           <input
             type="text"
             className="form-control"
@@ -42,7 +42,7 @@ const Edit = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="descricao">Descrição</label>
+          <label className='fw-bold m-2 ' htmlFor="descricao">Descrição</label>
           <textarea
             className="form-control"
             id="descricao"
@@ -55,7 +55,7 @@ const Edit = () => {
           ></textarea>
         </div>
         <div className="form-group">
-          <label htmlFor="preco">Preço</label>
+          <label className='fw-bold m-2 ' htmlFor="preco">Preço</label>
           <input
             type="number"
             className="form-control"
@@ -66,9 +66,11 @@ const Edit = () => {
             onChange={(e) => setProduto({ ...produto, price: e.target.value })}
           />
         </div>
+        <div className='mt-2' >
         <a onClick={handleSubmit} type="button" className="btn btn-primary">
           Salvar
         </a>
+        </div>
       </form>
     </div>
   );
